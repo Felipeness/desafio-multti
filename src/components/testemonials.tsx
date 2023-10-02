@@ -10,9 +10,23 @@ const Comment = styled.div`
   align-items: center;
   position: relative;
   width: 100%;
-
   height: 583px;
 
+  h2 {
+  font-size: 49px;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: 0px;
+  text-align: center;
+  }
+
+  p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: center;
+  }
 
   div {
     display: flex;
@@ -20,6 +34,7 @@ const Comment = styled.div`
     justify-content: center;
     align-items: center;
     gap: 29px;
+    padding-top: 131px;
   }
 `
 
