@@ -4,7 +4,6 @@ import styled from "styled-components"
 import { Logoicon } from "./logo-icon"
 
 
-
 const Nav = styled.div`
   display: flex;
   text-align: center;
@@ -18,6 +17,9 @@ const Nav = styled.div`
     height: 38.15px;
     top: 32.93px;
     left: 165.45px;
+
+    cursor: pointer;
+
     }
   `
 const Navselect = styled.div`
@@ -30,6 +32,10 @@ const Navselect = styled.div`
   gap: 30px;
   color: var(--bg-primary);
   list-style: none;
+
+  li {
+    cursor: pointer;
+  }
 
 `
 

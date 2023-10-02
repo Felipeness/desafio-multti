@@ -22,10 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={montserrat.className}>
-      <Header />
-      <div>
-      <HeroSection/>
-      </div>
+        <Header />
+        {children}
       </body>
     </html>
   )
