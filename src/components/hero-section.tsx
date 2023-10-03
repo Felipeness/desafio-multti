@@ -6,8 +6,12 @@ import { LaptopImg } from "./laptop"
 const Hero = styled.div`
   display: flex;
   flex-direction: row;
+  position: relative;
   width: 100%;
+  height: 847px;
   padding-top: 200px;
+
+
 
   color: var(--bg-primary);
 

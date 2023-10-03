@@ -2,7 +2,7 @@
 
 import styled from "styled-components"
 import { Logoicon } from "./logo-icon"
-
+import Link from "next/link";
 
 const Nav = styled.div`
   display: flex;
@@ -37,6 +37,31 @@ const Navselect = styled.div`
     cursor: pointer;
   }
 
+  &:link {
+    color: var(--white-mpays);
+    text-decoration: none;
+  }
+
+  button {
+    width: 105px;
+    height: 28px;
+    padding: 6px, 29px, 6px, 29px;
+    border-radius: 5px;
+    border: 1px solid;
+
+    border-color: var(--white-mpays);
+    color: var(--white-mpays);
+
+    background: transparent;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--white-mpays);
+      color: var(--color-primary);
+    }
+
+  }
 `
 
 export function Navbar() {
@@ -44,12 +69,36 @@ export function Navbar() {
     <Nav>
       <Logoicon />
       <Navselect>
-        <li>Soluções</li>
-        <li>Tarifas</li>
-        <li>Depoimentos</li>
-        <li>Contato</li>
-        <li>Cadastro</li>
-        <li>Entrar</li>
+        <li>
+          <Link href="/hero-section">
+          <p>Soluções</p>
+          </Link>
+        </li>
+        <li>
+          <Link href="/Carousel">
+            <p>Tarifas</p>
+          </Link>
+        </li>
+        <li>
+          <Link href="/Testemonials">
+            <p>Depoimentos</p>
+          </Link>
+        </li>
+        <li>
+          <Link href="/Footer">
+            <p>Contato</p>
+          </Link>
+        </li>
+        <li>
+          <Link href="/CreateAccount">
+            <p>Cadastro</p>
+          </Link>
+        </li>
+        <li>
+          <Link href="/Login">
+            <button>Entrar</button>
+          </Link>
+        </li>
       </Navselect>
     </Nav>
   )

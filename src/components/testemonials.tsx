@@ -10,7 +10,7 @@ const Comment = styled.div`
   align-items: center;
   position: relative;
   width: 100%;
-  height: 583px;
+  height: 713px;
 
   h2 {
   font-size: 49px;

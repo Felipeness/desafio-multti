@@ -8,6 +8,13 @@ import { Footer } from '@/components/footer'
 export default function Home() {
   return (
     <main className={styles.main}>
+      <Image
+        src="/assets/Landing Page BG.png"
+        alt="Back Ground Page "
+        objectFit="cover"
+        quality="100"
+        layout="fill"
+        />
       <div>
         <HeroSection />
       </div>

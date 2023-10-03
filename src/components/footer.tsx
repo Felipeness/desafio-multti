@@ -6,14 +6,13 @@ const FooterContainer = styled.div`
   display: flex;
   position: relative;
   width: 100%;
-  height: 100px;
-  background-color: black;
+  height: 591px;
 `
 
 export function Footer() {
   return (
-    <div>
+    <FooterContainer>
       Footer
-    </div>
+    </FooterContainer>
   )
 }
