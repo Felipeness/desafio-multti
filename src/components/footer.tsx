@@ -8,6 +8,7 @@ const FooterContainer = styled.div`
   position: relative;
   width: 1440px;
   height: 591px;
+  background-color: var(--topo-tabela-light);
 `;
 
 const FooterDiv = styled.footer`
@@ -137,7 +138,7 @@ const Box4 = styled.div`
 export function Footer() {
   return (
     <FooterContainer>
-      <Image src="/assets/Footer.png" alt="Footer image" fill="cover" />
+      <Image src="/assets/Footer.png" alt="Footer image" fill={true} />
       <FooterDiv>
         <Box>
           <h3>Endereço</h3>
