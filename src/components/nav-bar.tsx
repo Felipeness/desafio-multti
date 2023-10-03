@@ -37,9 +37,13 @@ const Navselect = styled.div`
     cursor: pointer;
   }
 
-  &:link {
+  a {
     color: var(--white-mpays);
     text-decoration: none;
+
+    &:hover {
+      color: var(--color-primary);
+    }
   }
 
   button {

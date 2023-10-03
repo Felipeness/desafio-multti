@@ -8,7 +8,7 @@ const Hero = styled.div`
   flex-direction: row;
   position: relative;
   width: 100%;
-  height: 847px;
+  height: 1000px;
   padding-top: 200px;
 
 
