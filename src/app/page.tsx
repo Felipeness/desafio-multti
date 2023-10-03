@@ -9,24 +9,17 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Image
-        src="/assets/Landing Page BG.png"
+        src="/assets/Hero Image.png"
         alt="Back Ground Page "
         objectFit="cover"
         quality="100"
         layout="fill"
         />
-      <div>
         <HeroSection />
-      </div>
-      <div>
         <Carousel />
-      </div>
-      <div>
         <Testemonials />
-      </div>
-      <div>
         <Footer />
-      </div>
+
     </main>
   )
 }

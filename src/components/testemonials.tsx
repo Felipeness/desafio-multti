@@ -1,7 +1,13 @@
-"use client"
+"use client";
 
-import styled from "styled-components"
-import { Rectangle1 } from "./rectangle-1"
+import styled from "styled-components";
+import { Rectangle1 } from "./rectangle-1";
+import Image from "next/image";
+import { TestemonialsCard } from "./testemonials-card";
+
+const Containercomment = styled.div`
+  width: 1440px;
+`;
 
 const Comment = styled.div`
   display: flex;
@@ -11,45 +17,85 @@ const Comment = styled.div`
   position: relative;
   width: 100%;
   height: 713px;
+  background-color: var(--topo-tabela-light);
 
-  h2 {
-  font-size: 49px;
-  font-weight: 400;
-  line-height: 60px;
-  letter-spacing: 0px;
-  text-align: center;
+  h1 {
+    color: #5e5873;
+    text-align: center;
+
+    font-size: 49px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 
   p {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 32px;
-  letter-spacing: 0px;
-  text-align: center;
+    color: #5e5873;
+    text-align: center;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31.9px;
   }
 
-  div {
+  div.containerCard {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 29px;
-    padding-top: 131px;
+    margin-top: 131px;
   }
-`
 
-
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 29px;
+  }
+`;
 
 export const Testemonials = () => {
+  const depoimentos = [
+    {
+      src: "/assets/image 1.png",
+      alt: "",
+      texto:
+        "A mpays foi a plataforma onde eu tive a maior taxa de aprovação de crédito do mercado.",
+      autor: "Carlos Eduardo Amaral",
+      cargo: "CEO da Amaral Mídia",
+    },
+    {
+      src: "/assets/image 2.png",
+      alt: "",
+      texto:
+        "O principal diferencial é a taxa de cartão recusado ser muito baixa, aumentando nossa taxa de conversão e o faturamento.”",
+      autor: "Renato Laureano",
+      cargo: "Fundador da Anellimn Store",
+    },
+    {
+      src: "/assets/image 3.png",
+      alt: "",
+      texto:
+        "Depois de muito pesquisar, decidi migrar para a mpays e já nas primeiras semanas nossa taxa de conversão subiu para 94%.",
+      autor: "Armando Girão",
+      cargo: "Fundador da Orion E-commerce",
+    },
+  ];
+
   return (
-    <Comment>
-        <h2> Depoimentos</h2>
+    <Containercomment>
+      <Comment>
+        <h1> Depoimentos </h1>
         <p>O suporte ao cliente é nossa prioridade</p>
-      <div>
-        <Rectangle1 />
-        <Rectangle1 />
-        <Rectangle1 />
-      </div>
-    </Comment>
-  )
-}
+        <div className="containerCard">
+          {depoimentos.map((depoimento, index) => (
+            <TestemonialsCard key={index} {...depoimento} />
+          ))}
+        </div>
+      </Comment>
+    </Containercomment>
+  );
+};
