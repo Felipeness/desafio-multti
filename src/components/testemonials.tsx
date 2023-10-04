@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Rectangle1 } from "./rectangle-1";
 import Image from "next/image";
 import { TestemonialsCard } from "./testemonials-card";
+import { Element } from "react-scroll";
 
 const Containercomment = styled.div`
   width: 100%;
@@ -87,15 +88,17 @@ export const Testemonials = () => {
 
   return (
     <Containercomment>
-      <Comment>
-        <h1> Depoimentos </h1>
-        <p>O suporte ao cliente é nossa prioridade</p>
-        <div className="containerCard">
-          {depoimentos.map((depoimento, index) => (
-            <TestemonialsCard key={index} {...depoimento} />
-          ))}
-        </div>
-      </Comment>
+      <Element name="depoimentos">
+        <Comment>
+          <h1> Depoimentos </h1>
+          <p>O suporte ao cliente é nossa prioridade</p>
+          <div className="containerCard">
+            {depoimentos.map((depoimento, index) => (
+              <TestemonialsCard key={index} {...depoimento} />
+            ))}
+          </div>
+        </Comment>
+      </Element>
     </Containercomment>
   );
 };

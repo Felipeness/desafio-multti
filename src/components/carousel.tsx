@@ -6,6 +6,7 @@ import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { ChevronDireito } from "./chevron-direito";
 import { ChevronEsquerdo } from "./chevron-esquerdo";
+import { Element } from "react-scroll";
 
 const Carrosel = styled.div`
   display: flex;
@@ -76,36 +77,38 @@ export function CarroselComponent() {
   };
 
   return (
-    <Carrosel>
-      <Carousel
-        showThumbs={false}
-        showArrows={true}
-        showStatus={false}
-        showIndicators={false}
-        dynamicHeight={true}
-        renderArrowNext={(onClickHandler, hasNext, label) =>
-          hasNext && (
-            <CustomNextButton onClick={onClickHandler} aria-label={label} />
-          )
-        }
-        renderArrowPrev={(onClickHandler, hasPrev, label) =>
-          hasPrev && (
-            <CustomPrevButton onClick={onClickHandler} aria-label={label} />
-          )
-        }>
-        <div>
-          <img src="assets/Slider1.png" />
-        </div>
-        <div>
-          <img src="assets/Slider2.png" />
-        </div>
-        <div>
-          <img src="assets/Slider3.png" />
-        </div>
-        <div>
-          <img src="assets/Slider4.png" />
-        </div>
-      </Carousel>
-    </Carrosel>
+    <Element name="tarifas">
+      <Carrosel>
+        <Carousel
+          showThumbs={false}
+          showArrows={true}
+          showStatus={false}
+          showIndicators={false}
+          dynamicHeight={true}
+          renderArrowNext={(onClickHandler, hasNext, label) =>
+            hasNext && (
+              <CustomNextButton onClick={onClickHandler} aria-label={label} />
+            )
+          }
+          renderArrowPrev={(onClickHandler, hasPrev, label) =>
+            hasPrev && (
+              <CustomPrevButton onClick={onClickHandler} aria-label={label} />
+            )
+          }>
+          <div>
+            <img src="assets/Slider1.png" />
+          </div>
+          <div>
+            <img src="assets/Slider2.png" />
+          </div>
+          <div>
+            <img src="assets/Slider3.png" />
+          </div>
+          <div>
+            <img src="assets/Slider4.png" />
+          </div>
+        </Carousel>
+      </Carrosel>
+    </Element>
   );
 }

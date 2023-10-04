@@ -21,18 +21,18 @@ export default function Home() {
           position: "absolute",
         }}
       />
-      <Element name="soluções">
+
         <HeroSection />
-      </Element>
-      <Element name="tarifas">
+
+
         <CarroselComponent />
-      </Element>
-      <Element name="depoimentos">
+
+
         <Testemonials />
-      </Element>
-      <Element name="contato">
+
+
         <Footer />
-      </Element>
+
     </main>
   );
 }

@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import { LaptopImg } from "./laptop";
+import { Element } from "react-scroll";
 
 const Hero = styled.div`
   display: flex;
@@ -49,17 +50,19 @@ const Hero = styled.div`
 
 export function HeroSection() {
   return (
-    <Hero>
-      <div>
-        <h1>
-          Tecnologia e segurança pra você <p>vender mais.</p>
-        </h1>
-        <h2>
-          Venda online com a segurança e tecnologia mpays. Soluções simples e
-          flexíveis para digitalizar o seu negócio.
-        </h2>
-      </div>
-      <LaptopImg />
-    </Hero>
+    <Element name="soluções">
+      <Hero>
+        <div>
+          <h1>
+            Tecnologia e segurança pra você <p>vender mais.</p>
+          </h1>
+          <h2>
+            Venda online com a segurança e tecnologia mpays. Soluções simples e
+            flexíveis para digitalizar o seu negócio.
+          </h2>
+        </div>
+        <LaptopImg />
+      </Hero>
+    </Element>
   );
 }

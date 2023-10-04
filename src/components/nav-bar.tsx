@@ -12,6 +12,7 @@ const Nav = styled.div`
   align-items: center;
   flex-direction: row;
   width: 100%;
+  position: fixed;
   svg {
     position: absolute;
     width: 171.55px;
