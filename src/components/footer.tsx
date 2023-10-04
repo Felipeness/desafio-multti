@@ -6,7 +6,7 @@ import Image from "next/image";
 const FooterContainer = styled.div`
   display: flex;
   position: relative;
-  width: 1440px;
+  width: 100%;
   height: 591px;
   background-color: var(--topo-tabela-light);
 `;

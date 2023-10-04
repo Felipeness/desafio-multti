@@ -9,6 +9,7 @@ const White = styled.div`
   background-color: var(--white-mpays-2);
   padding-top: 108px;
   position: relative;
+  border-radius: 8px;
 
   p {
     width: 256px;

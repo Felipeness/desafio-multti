@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
-import styled from "styled-components"
-import { Logoicon } from "./logo-icon"
-import Link from "next/link";
+import styled from "styled-components";
+import { Logoicon } from "./logo-icon";
+import { MouseEvent } from "react";
+import { Link } from "react-scroll";
 
 const Nav = styled.div`
   display: flex;
@@ -11,7 +12,7 @@ const Nav = styled.div`
   align-items: center;
   flex-direction: row;
   width: 100%;
-    svg {
+  svg {
     position: absolute;
     width: 171.55px;
     height: 38.15px;
@@ -19,9 +20,8 @@ const Nav = styled.div`
     left: 165.45px;
 
     cursor: pointer;
-
-    }
-  `
+  }
+`;
 const Navselect = styled.div`
   display: flex;
   position: absolute;
@@ -64,9 +64,8 @@ const Navselect = styled.div`
       background-color: var(--white-mpays);
       color: var(--color-primary);
     }
-
   }
-`
+`;
 
 export function Navbar() {
   return (
@@ -74,36 +73,34 @@ export function Navbar() {
       <Logoicon />
       <Navselect>
         <li>
-          <Link href="/hero-section">
-          <p>Soluções</p>
+          <Link to="soluções" smooth={true} duration={500}>
+            <p>Soluções</p>
           </Link>
         </li>
         <li>
-          <Link href="/Carousel">
+          <Link to="tarifas" smooth={true} duration={500}>
             <p>Tarifas</p>
           </Link>
         </li>
         <li>
-          <Link href="/Testemonials">
+          <Link to="depoimentos" smooth={true} duration={500}>
             <p>Depoimentos</p>
           </Link>
         </li>
         <li>
-          <Link href="/Footer">
+          <Link to="contato" smooth={true} duration={500}>
             <p>Contato</p>
           </Link>
         </li>
         <li>
-          <Link href="/CreateAccount">
+          <Link to="cadastro" smooth={true} duration={500}>
             <p>Cadastro</p>
           </Link>
         </li>
         <li>
-          <Link href="/Login">
-            <button>Entrar</button>
-          </Link>
+          <button>Entrar</button>
         </li>
       </Navselect>
     </Nav>
-  )
+  );
 }

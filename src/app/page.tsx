@@ -1,9 +1,12 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-import { HeroSection } from '@/components/hero-section'
-import { Carousel } from '@/components/carousel'
-import { Testemonials } from '@/components/testemonials'
-import { Footer } from '@/components/footer'
+"use client";
+
+import Image from "next/image";
+import styles from "./page.module.css";
+import { HeroSection } from "@/components/hero-section";
+import { CarroselComponent } from "@/components/carousel";
+import { Testemonials } from "@/components/testemonials";
+import { Footer } from "@/components/footer";
+import { Element } from "react-scroll";
 
 export default function Home() {
   return (
@@ -11,15 +14,25 @@ export default function Home() {
       <Image
         src="/assets/Hero Image.png"
         alt="Back Ground Page "
-        objectFit="cover"
         quality="100"
-        layout="fill"
-        />
+        width={1920}
+        height={1080}
+        style={{
+          position: "absolute",
+        }}
+      />
+      <Element name="soluções">
         <HeroSection />
-        <Carousel />
+      </Element>
+      <Element name="tarifas">
+        <CarroselComponent />
+      </Element>
+      <Element name="depoimentos">
         <Testemonials />
+      </Element>
+      <Element name="contato">
         <Footer />
-
+      </Element>
     </main>
-  )
+  );
 }

@@ -6,7 +6,7 @@ import Image from "next/image";
 import { TestemonialsCard } from "./testemonials-card";
 
 const Containercomment = styled.div`
-  width: 1440px;
+  width: 100%;
 `;
 
 const Comment = styled.div`
