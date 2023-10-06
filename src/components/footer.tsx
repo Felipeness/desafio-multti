@@ -12,7 +12,6 @@ const FooterContainer = styled.div`
   align-items: center;
   width: 100%;
   height: 591px;
-  background-color: var(--topo-tabela-light);
 `;
 
 const FooterDiv = styled.footer`

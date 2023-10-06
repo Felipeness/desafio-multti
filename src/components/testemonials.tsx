@@ -18,7 +18,6 @@ const Comment = styled.div`
   position: relative;
   width: 100%;
   height: 713px;
-  background-color: var(--topo-tabela-light);
 
   h1 {
     color: #5e5873;

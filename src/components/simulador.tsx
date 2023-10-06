@@ -2,32 +2,64 @@
 
 import styled from "styled-components";
 import React, { useState } from "react";
-import { Montserrat } from "next/font/google";
 
 const SimulatorContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+  background-color: var(--topo-tabela-light);
+
+  h2 {
+    width: 380px;
+
+    color: var(--Cinza-Escuro---Mpays, #5e5873);
+
+    font-size: 49px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 27px;
+  }
+
+  p {
+    width: 350px;
+    height: 53px;
+
+    color: var(--Cinza-Escuro---Mpays, #5e5873);
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31.9px;
+  }
 `;
 
 const InfoContainer = styled.div`
-  flex: 1;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 120px;
+  padding-right: 65px;
 `;
 
 const SimulatorSection = styled.div`
   display: flex;
-  justify-content: space-between;
   width: 664px;
   height: 309px;
 `;
 
 const SimulationForm = styled.form`
   display: flex;
-  flex: 2;
   padding: 20px;
+  gap: 31px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 16px;
+
+  width: 100%;
+
+  background: var(--Fundo-Light---Mpays, #f8f8f8);
 `;
 
 const Form = styled.div`
@@ -35,12 +67,16 @@ const Form = styled.div`
   flex-direction: column;
   gap: 20px;
   margin-bottom: 20px;
-  width: 70%;
-  height: 40%;
+  width: 60%;
 `;
 
 const FormField = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   margin-bottom: 20px;
+  gap: 2px;
 `;
 
 const StyledLabel = styled.label`
@@ -66,10 +102,39 @@ const ResultContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+  width: 40%;
+  gap: 24px;
+
+  color: var(--Cinza-Escuro---Mpays, #5e5873);
+
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  p {
+    width: 217px;
+    height: 33px;
+    flex-shrink: 0;
+
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
 `;
 
 const ResultField = styled.div`
   margin-bottom: 10px;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: left;
 `;
 
 function Simulador() {
@@ -118,7 +183,7 @@ function Simulador() {
           </Form>
           <ResultContainer>
             <h3>VOCÊ RECEBE:</h3>
-            <ResultField>NA HORA Não disponível</ResultField>
+            <ResultField>NA HORA: Não disponível</ResultField>
             <ResultField>EM 10 DIAS R$ 949,70</ResultField>
             <ResultField>EM 30 DIAS R$ 959,70</ResultField>
             <p>
