@@ -7,7 +7,8 @@ import { CarroselComponent } from "@/components/carousel";
 import { Testemonials } from "@/components/testemonials";
 import { Footer } from "@/components/footer";
 import { Element } from "react-scroll";
-import { Simulador } from "@/components/simulador";
+import FormAccount from "@/components/form-account";
+import Simulador from "@/components/simulador";
 
 export default function Home() {
   return (
@@ -30,6 +31,8 @@ export default function Home() {
       <Simulador />
 
       <Testemonials />
+
+      <FormAccount />
 
       <Footer />
     </main>
