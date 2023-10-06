@@ -15,8 +15,11 @@ const Carrosel = styled.div`
   position: relative;
   width: 100%;
   max-width: 1110px;
-  background-color: var(--bg-primary);
-  color: var(--bg-secondary);
+  background-color: transparent;
+  padding-bottom: 120px;
+  padding-top: 0;
+  border-top: none;
+  margin-top: -30px;
 
   .carousel .carousel-root {
     display: flex;
@@ -25,7 +28,8 @@ const Carrosel = styled.div`
   .carousel.carousel-slider {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 700px;
+    margin-top: -35px;
   }
 
   .carousel .control-prev.control-arrow:before {
@@ -37,7 +41,6 @@ const Carrosel = styled.div`
     justify-content: center;
     align-items: center;
     border-style: none;
-    background-color: var(--bg-primary);
     position: relative;
   }
 
