@@ -22,13 +22,9 @@ const HeroSelect = styled.div`
 
 const Hero = styled.div`
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
-
-  svg {
-    margin: -100px;
-  }
 
   div {
     display: flex;
