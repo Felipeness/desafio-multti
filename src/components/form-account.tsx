@@ -65,13 +65,37 @@ const FormField = styled.div`
   color: var(--Cinza-Textos-Light--Mpay, #6f6f6f);
 
   padding: 5px;
-
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px; /* 150% */
 
   margin-bottom: 20px;
+
+  [type] {
+    padding: 8px 52px 8px 16px;
+  }
+
+  [type="email"] {
+    padding: 8px 52px 8px 16px;
+  }
+
+  [type="tel"] {
+    padding: 8px 52px 8px 16px;
+  }
+
+  [type="password"] {
+    padding: 8px 52px 8px 16px;
+  }
+
+  ::placeholder {
+    color: var(--Cinza---Input-de-Forms---Mpay, #b9b9c3);
+
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
 `;
 
 const StyledLabel = styled.label`
@@ -134,6 +158,7 @@ function FormAccount() {
               type="text"
               id="nome"
               name="nome"
+              placeholder="Nome"
               required
               onChange={handleChange}
             />
@@ -145,6 +170,7 @@ function FormAccount() {
               type="email"
               id="email"
               name="email"
+              placeholder="E-mail"
               required
               onChange={handleChange}
             />
@@ -156,6 +182,7 @@ function FormAccount() {
               type="tel"
               id="telefone"
               name="telefone"
+              placeholder="Telefone"
               required
               onChange={handleChange}
             />
@@ -167,6 +194,7 @@ function FormAccount() {
               type="password"
               id="senha"
               name="senha"
+              placeholder="⚉ ⚉ ⚉ ⚉ ⚉ ⚉ ⚉ ⚉"
               required
               onChange={handleChange}
             />
