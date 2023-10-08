@@ -73,23 +73,11 @@ const FormField = styled.div`
   margin-bottom: 20px;
 
   [type] {
-    padding: 8px 52px 8px 16px;
-  }
-
-  [type="email"] {
-    padding: 8px 52px 8px 16px;
-  }
-
-  [type="tel"] {
-    padding: 8px 52px 8px 16px;
-  }
-
-  [type="password"] {
-    padding: 8px 52px 8px 16px;
+    padding: 8px 1px 8px 16px;
   }
 
   ::placeholder {
-    color: var(--Cinza---Input-de-Forms---Mpay, #b9b9c3);
+    color: var(--gray-input);
 
     font-size: 12px;
     font-style: normal;

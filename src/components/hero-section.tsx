@@ -4,16 +4,36 @@ import styled from "styled-components";
 import { LaptopImg } from "./laptop";
 import { Element } from "react-scroll";
 
-const Hero = styled.div`
+const HeroContainer = styled.div`
   display: flex;
-  justify-content: center;
-  flex-direction: row;
   position: relative;
   width: 100%;
   height: 1000px;
-  padding-top: 200px;
 
   color: var(--bg-primary);
+`;
+
+const HeroSelect = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Hero = styled.div`
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+
+  svg {
+    margin: -100px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
 
   h1 {
     font-size: 48px;
@@ -51,18 +71,22 @@ const Hero = styled.div`
 export function HeroSection() {
   return (
     <Element name="soluções">
-      <Hero>
-        <div>
-          <h1>
-            Tecnologia e segurança pra você <p>vender mais.</p>
-          </h1>
-          <h2>
-            Venda online com a segurança e tecnologia mpays. Soluções simples e
-            flexíveis para digitalizar o seu negócio.
-          </h2>
-        </div>
-        <LaptopImg />
-      </Hero>
+      <HeroContainer>
+        <HeroSelect>
+          <Hero>
+            <div>
+              <h1>
+                Tecnologia e segurança pra você <p>vender mais.</p>
+              </h1>
+              <h2>
+                Venda online com a segurança e tecnologia mpays. Soluções
+                simples e flexíveis para digitalizar o seu negócio.
+              </h2>
+            </div>
+            <LaptopImg />
+          </Hero>
+        </HeroSelect>
+      </HeroContainer>
     </Element>
   );
 }
