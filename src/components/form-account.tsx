@@ -5,23 +5,72 @@ import React, { useState } from "react";
 
 const FormContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
+  width: 100%;
+  height: 503px;
+`;
+
+const FormSection = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+  width: 1108px;
+  height: 383px;
 `;
 
 const InfoContainer = styled.div`
-  flex: 1;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-right: 125px;
+
+  h2 {
+    width: 455px;
+
+    color: var(--Cinza-Escuro---Mpays, #5e5873);
+
+    font-size: 49px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  p {
+    width: 540px;
+    height: 29px;
+
+    color: var(--Cinza-Escuro---Mpays, #5e5873);
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31.9px;
+  }
 `;
 
 const StyledForm = styled.form`
-  flex: 2;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  width: 443px;
+  height: 383px;
+
+  border: none;
 `;
 
 const FormField = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  color: var(--Cinza-Textos-Light--Mpay, #6f6f6f);
+
+  padding: 5px;
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 150% */
+
   margin-bottom: 20px;
 `;
 
@@ -38,16 +87,17 @@ const StyledInput = styled.input`
 `;
 
 const StyledButton = styled.button`
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+  display: flex;
+  width: 141px;
+  height: 38px;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #7d45dc;
+  color: var(--white-mpays);
   border: none;
   border-radius: 4px;
   cursor: pointer;
-
-  &:hover {
-    background-color: #0056b3;
-  }
 `;
 
 function FormAccount() {
@@ -71,58 +121,59 @@ function FormAccount() {
 
   return (
     <FormContainer>
-      <InfoContainer>
-        <h2>Crie sua conta</h2>
-        <p>Preencha o formulário ao lado para cadastrar-se no mpays.</p>
-      </InfoContainer>
+      <FormSection>
+        <InfoContainer>
+          <h2>Crie sua conta</h2>
+          <p>Preencha o formulário ao lado para cadastrar-se no mpays.</p>
+        </InfoContainer>
 
-      <StyledForm onSubmit={handleSubmit}>
-        <FormField>
-          <StyledLabel htmlFor="nome">Nome e sobrenome *</StyledLabel>
-          <StyledInput
-            type="text"
-            id="nome"
-            name="nome"
-            required
-            onChange={handleChange}
-          />
-        </FormField>
+        <StyledForm onSubmit={handleSubmit}>
+          <FormField>
+            <StyledLabel htmlFor="nome">Nome e sobrenome *</StyledLabel>
+            <StyledInput
+              type="text"
+              id="nome"
+              name="nome"
+              required
+              onChange={handleChange}
+            />
+          </FormField>
 
-        <FormField>
-          <StyledLabel htmlFor="email">Email *</StyledLabel>
-          <StyledInput
-            type="email"
-            id="email"
-            name="email"
-            required
-            onChange={handleChange}
-          />
-        </FormField>
+          <FormField>
+            <StyledLabel htmlFor="email">Email *</StyledLabel>
+            <StyledInput
+              type="email"
+              id="email"
+              name="email"
+              required
+              onChange={handleChange}
+            />
+          </FormField>
 
-        <FormField>
-          <StyledLabel htmlFor="telefone">Telefone *</StyledLabel>
-          <StyledInput
-            type="tel"
-            id="telefone"
-            name="telefone"
-            required
-            onChange={handleChange}
-          />
-        </FormField>
+          <FormField>
+            <StyledLabel htmlFor="telefone">Telefone *</StyledLabel>
+            <StyledInput
+              type="tel"
+              id="telefone"
+              name="telefone"
+              required
+              onChange={handleChange}
+            />
+          </FormField>
 
-        <FormField>
-          <StyledLabel htmlFor="senha">Senha *</StyledLabel>
-          <StyledInput
-            type="password"
-            id="senha"
-            name="senha"
-            required
-            onChange={handleChange}
-          />
-        </FormField>
-
-        <StyledButton type="submit">Cadastrar</StyledButton>
-      </StyledForm>
+          <FormField>
+            <StyledLabel htmlFor="senha">Senha *</StyledLabel>
+            <StyledInput
+              type="password"
+              id="senha"
+              name="senha"
+              required
+              onChange={handleChange}
+            />
+          </FormField>
+          <StyledButton type="submit">Cadastrar</StyledButton>
+        </StyledForm>
+      </FormSection>
     </FormContainer>
   );
 }
