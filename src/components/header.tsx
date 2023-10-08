@@ -4,11 +4,6 @@ import styled from "styled-components";
 import { Montserrat } from "next/font/google";
 import { Navbar } from "./nav-bar";
 
-const montserrat = Montserrat({
-  weight: ["400"],
-  subsets: ["latin"],
-});
-
 interface HeaderProps {}
 
 const TagHeader = styled.header`

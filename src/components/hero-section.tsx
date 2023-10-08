@@ -29,32 +29,30 @@ const Hero = styled.div`
   div {
     display: flex;
     flex-direction: column;
+    width: 480px;
   }
 
   h1 {
-    font-size: 48px;
+    font-size: 49px;
     font-weight: 400;
     line-height: 56px;
     letter-spacing: 0.15px;
-    text-align: left;
     color: var(--bg-primary);
 
-    width: 455.32px;
-    height: 180px;
+    width: 480px;
 
-    p {
+    span {
       font-size: 49px;
       font-weight: 700;
       line-height: 60px;
       letter-spacing: 0px;
-      text-align: left;
     }
   }
 
   h2 {
     width: 437.3px;
     height: 86px;
-    margin-top: 48px;
+    margin-top: 22px;
 
     font-size: 18px;
     font-weight: 500;
@@ -72,7 +70,7 @@ export function HeroSection() {
           <Hero>
             <div>
               <h1>
-                Tecnologia e segurança pra você <p>vender mais.</p>
+                Tecnologia e segurança pra você <span>vender mais.</span>
               </h1>
               <h2>
                 Venda online com a segurança e tecnologia mpays. Soluções

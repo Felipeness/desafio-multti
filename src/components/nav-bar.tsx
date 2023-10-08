@@ -10,24 +10,20 @@ const Nav = styled.div`
   text-align: center;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
-  width: 100%;
-  position: fixed;
+  width: 1275px;
+
   svg {
-    position: absolute;
     width: 171.55px;
     height: 38.15px;
-    top: 32.93px;
-    left: 165.45px;
+    position: relative;
 
     cursor: pointer;
   }
 `;
 const Navselect = styled.div`
   display: flex;
-  position: absolute;
-  width: Hug (591px);
-  height: Hug (28px);
+  justify-content: center;
+  align-items: center;
   top: 36px;
   right: 165px;
   gap: 30px;
